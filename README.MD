@@ -38,6 +38,17 @@
 | **Orange**   | S1 (ENCA)  | Channel A|
 | **Green**    | S2 (ENCB)  | Channel B|
 
+---
+
+## Library capabilities
+
+| Library          | Level              | Function                              |
+|------------------|--------------------|---------------------------------------|
+| **MotorDriver**  | Single Motor       | Control — Speed, Direction            |
+| **MotorEncoder** | Single Motor       | Measure — Speed, Direction            |
+| **PIDController**| Single Motor       | Closed-loop — Position, Velocity      |
+| **Kinematics**   | Motor Integration  | Robot — Position, Velocity            |
+| **Communication**| micro-ROS Integration | Input — Velocity, Output — Position |
 
 ---
 ---
