@@ -1,40 +1,24 @@
-├── include/
-│   ├── config.h              # Pin mappings, constants
-│   └── types.h               # Common typedefs/structs
-│
-├── lib/
-│   ├── MotorDriver/
-│   │   ├── src/
-│   │   │   ├── MotorDriver.cpp
-│   │   │   └── MotorDriver.h
-│   │   └── library.json      # Optional metadata
-│   │
-│   ├── MotorEncoder/
-│   │   ├── src/
-│   │   │   ├── MotorEncoder.cpp
-│   │   │   └── MotorEncoder.h
-│   │   └── library.json
-│   │
-│   ├── PIDController/
-│   │   ├── src/
-│   │   │   ├── PID.cpp
-│   │   │   └── PID.h
-│   │   └── library.json
-│   │
-│   ├── Kinematics/
-│   │   ├── src/
-│   │   │   ├── Kinematics.cpp    # e.g. differential / omni calculations
-│   │   │   └── Kinematics.h
-│   │   └── library.json
-│   │
-│   └── Communication/
-│       ├── src/
-│       │   ├── Comms.cpp         # Serial, ROS, Wi-Fi comms
-│       │   └── Comms.h
-│       └── library.json
-│
-├── src/
-│   └── main.cpp               # Setup + main control loop
-│
-├── platformio.ini
-└── README.md
+### Encoder Readings
+
+clockwise -> S1 -> S2
+anti-clockwise => S2 -> S1
+
+S1 - ENCA 
+S2 - ENCB
+
+when S1 Triggered -> if S2 LOW -> clockwise
+
+when S1 Triggered -> if S2 HIGH -> anti-clockwise
+
+### Motor Wiring
+    Red - (M-) -> OUT1
+    Blk - (M+) -> OUT2
+
+    Clockwise movement:
+    OUT1 = LOW
+    OUT2 = HIGH
+
+    White -> VCC
+    Yellow -> GND
+    Orange -> S1
+    Green -> S2
