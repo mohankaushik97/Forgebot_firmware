@@ -1,24 +1,39 @@
-### Encoder Readings
+# Encoder & Motor Wiring Guide
 
-clockwise -> S1 -> S2
-anti-clockwise => S2 -> S1
+## Encoder Readings
 
-S1 - ENCA 
-S2 - ENCB
+- **Clockwise Rotation:** `S1 → S2`  
+- **Anti-Clockwise Rotation:** `S2 → S1`
 
-when S1 Triggered -> if S2 LOW -> clockwise
+**Logic Table:**
 
-when S1 Triggered -> if S2 HIGH -> anti-clockwise
+| Event           | Condition       | Direction     |
+|-----------------|-----------------|---------------|
+| `S1` Triggered  | `S2 = LOW`      | Clockwise     |
+| `S1` Triggered  | `S2 = HIGH`     | Anti-Clockwise|
 
-### Motor Wiring
-    Red - (M-) -> OUT1
-    Blk - (M+) -> OUT2
+---
 
-    Clockwise movement:
-    OUT1 = LOW
-    OUT2 = HIGH
+## Motor Wiring
 
-    White -> VCC
-    Yellow -> GND
-    Orange -> S1
-    Green -> S2
+| Motor Wire | Connection | Note |
+|------------|------------|------|
+| **Red (M-)**  | OUT1       |      |
+| **Black (M+)**| OUT2       |      |
+
+**Direction Control:**
+
+| OUT1 | OUT2 | Direction  |
+|------|------|-------------|
+| LOW  | HIGH | Clockwise   |
+
+---
+
+## Encoder Pinout
+
+| Encoder Wire | Connection | Function |
+|--------------|------------|----------|
+| **White**    | VCC        | Power    |
+| **Yellow**   | GND        | Ground   |
+| **Orange**   | S1 (ENCA)  | Channel A|
+| **Green**    | S2 (ENCB)  | Channel B|
