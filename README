@@ -1,0 +1,40 @@
+├── include/
+│   ├── config.h              # Pin mappings, constants
+│   └── types.h               # Common typedefs/structs
+│
+├── lib/
+│   ├── MotorDriver/
+│   │   ├── src/
+│   │   │   ├── MotorDriver.cpp
+│   │   │   └── MotorDriver.h
+│   │   └── library.json      # Optional metadata
+│   │
+│   ├── MotorEncoder/
+│   │   ├── src/
+│   │   │   ├── MotorEncoder.cpp
+│   │   │   └── MotorEncoder.h
+│   │   └── library.json
+│   │
+│   ├── PIDController/
+│   │   ├── src/
+│   │   │   ├── PID.cpp
+│   │   │   └── PID.h
+│   │   └── library.json
+│   │
+│   ├── Kinematics/
+│   │   ├── src/
+│   │   │   ├── Kinematics.cpp    # e.g. differential / omni calculations
+│   │   │   └── Kinematics.h
+│   │   └── library.json
+│   │
+│   └── Communication/
+│       ├── src/
+│       │   ├── Comms.cpp         # Serial, ROS, Wi-Fi comms
+│       │   └── Comms.h
+│       └── library.json
+│
+├── src/
+│   └── main.cpp               # Setup + main control loop
+│
+├── platformio.ini
+└── README.md
