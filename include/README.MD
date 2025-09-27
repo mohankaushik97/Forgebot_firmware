@@ -7,7 +7,7 @@ It supports **4 motors (FR, FL, BR, BL)** with PWM speed control and H-bridge di
 
 ## Table of Motor Pins
 
-| Motor | Control Pin 1 | Control Pin 2 | PWM Pin A | PWM Pin B |
+| Motor | Control Pin 1 | Control Pin 2 | ENC Pin A | ENC Pin B |
 |-------|---------------|---------------|-----------|-----------|
 | FR    | 4             | 5             | 19        | 20        |
 | FL    | 6             | 7             | 21        | 47        |
